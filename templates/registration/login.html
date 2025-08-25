@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <!-- Add a "Remember Me" checkbox -->
+    <div>
+      <label>
+        <input type="checkbox" name="remember_me"> Remember Me
+      </label>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}{{ blog_post.title }} - Django Notifications{% endblock %}
+
+{% block content %}
+    <h1>{{ blog_post.title }}</h1>
+    <p>{{ blog_post.content }}</p>
+    <p>Published on: {{ blog_post.created_at }}</p>
+    <p>Author: {{ blog_post.author }}</p>
+{% endblock %}
