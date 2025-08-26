@@ -5,6 +5,7 @@ from asgiref.sync import sync_to_async
 
 class NotificationConsumer(AsyncWebsocketConsumer):
     async def connect(self):
+        print("WebSocket connection requested")
         self.user = self.scope["user"]
         if self.user.is_authenticated:
             self.group_name = f'user_notifications_{self.user.id}' # Unique group for each user
