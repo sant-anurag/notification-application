@@ -9,6 +9,7 @@ from notifications.models import Notification
 
 def blog_list(request):
     posts = BlogPost.objects.all().order_by('-created_at')
+    posts = [post  for post in posts]
     return render(request, 'blog/blog_list.html', {'posts': posts})
 
 def blog_detail(request, pk):
